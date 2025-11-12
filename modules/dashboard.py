@@ -9,3 +9,5 @@ class DashboardPage(tk.Frame):
         tk.Label(self, text="🏠 Dashboard", font=("Arial", 18)).pack(pady=30)
         tk.Button(self, text="Go to Plot Viewer",
                   command=lambda: controller.show_page("PlotViewerPage")).pack(pady=10)
+        tk.Button(self, text="Open Settings",
+                  command=lambda: controller.show_page("SettingsPage")).pack(pady=10)

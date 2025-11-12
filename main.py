@@ -3,6 +3,7 @@ import tkinter as tk
 from modules.login import LoginPage
 from modules.dashboard import DashboardPage
 from modules.plot_viewer import PlotViewerPage
+from modules.settings import SettingsPage
 
 class App(tk.Tk):
     def __init__(self):
@@ -21,7 +22,7 @@ class App(tk.Tk):
 
     def create_pages(self):
         """Register all modules here"""
-        for PageClass in (LoginPage, DashboardPage, PlotViewerPage):
+        for PageClass in (LoginPage, DashboardPage, PlotViewerPage, SettingsPage):
             page = PageClass(self.container, self)
             self.pages[PageClass.__name__] = page
             page.grid(row=0, column=0, sticky="nsew")
